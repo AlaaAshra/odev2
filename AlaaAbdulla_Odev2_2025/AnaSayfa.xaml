@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlaaAbdulla_Odev2_2025.AnaSayfa"
+             Title="Ana Sayfa"
+             BackgroundColor="#E6F0FA">
+    <!-- أزرق فاتح -->
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,40"
+            VerticalOptions="Center">
+
+            <Frame CornerRadius="20" HasShadow="False" Padding="0" HorizontalOptions="Center">
+                <Image Source="me.jpg" HorizontalOptions="Center" Aspect="AspectFill" HeightRequest="200" WidthRequest="200" />
+            </Frame>
+
+            <Frame CornerRadius="10" Padding="10" HasShadow="True" BorderColor="#007ACC" BackgroundColor="White">
+                <Label Text="Alaa Abdalla"
+                       FontSize="32"
+                       TextColor="#003366"
+                       HorizontalOptions="Center" />
+            </Frame>
+
+            <Frame CornerRadius="10" Padding="6" HasShadow="True" BorderColor="#007ACC" BackgroundColor="White">
+                <Label Text="Ödev-2"
+                       FontSize="20"
+                       TextColor="#004C99"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Frame>
+
+            <Frame CornerRadius="10" Padding="6" HasShadow="True" BorderColor="#007ACC" BackgroundColor="White">
+                <Label Text="Bartin Üniversitesi / Bilgisayar Mühendisliği"
+                       FontSize="18"
+                       TextColor="#003366"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+

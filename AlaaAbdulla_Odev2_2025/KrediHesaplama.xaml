@@ -1,0 +1,120 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlaaAbdulla_Odev2_2025.KrediHesaplama"
+             Title="Kredi Hesaplama"
+             BackgroundColor="#E6F0FA">
+
+    <Grid
+        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+        ColumnDefinitions="*,*,*"
+        RowSpacing="10"
+        ColumnSpacing="0"
+        Padding="20">
+
+        <Picker x:Name="KrediTuruPicker"
+                Title="Kredi Türü Seçiniz"
+                Margin="10"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="White"
+                TextColor="Black">
+            <Picker.Items>
+                <x:String>İhtiyaç Kredisi</x:String>
+                <x:String>Konut Kredisi</x:String>
+                <x:String>Taşıt Kredisi</x:String>
+                <x:String>Ticari Kredisi</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Kredi Tutarı (TL)"
+               TextColor="#003366"
+               Grid.Row="2"
+               Grid.Column="0"
+               VerticalTextAlignment="Center"
+               Padding="10,0,0,0"/>
+        <Entry x:Name="KrediTutarEntry"
+               Placeholder="Kredi Tutarı Giriniz"
+               Grid.Row="2"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Margin="0,0,10,0"
+               Keyboard="Numeric"
+               BackgroundColor="White"
+               TextColor="Black"/>
+
+        <Label Text="Faiz Oranı (%)"
+               TextColor="#003366"
+               Grid.Row="3"
+               Grid.Column="0"
+               VerticalTextAlignment="Center"
+               Padding="10,0,0,0"/>
+        <Entry x:Name="FaizOraniEntry"
+               Placeholder="Faiz Oranı Giriniz"
+               Grid.Row="3"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Margin="0,0,10,0"
+               Keyboard="Numeric"
+               BackgroundColor="White"
+               TextColor="Black"/>
+
+        <Label Text="Vade (Ay)"
+               TextColor="#003366"
+               Grid.Row="4"
+               Grid.Column="0"
+               VerticalTextAlignment="Center"
+               Padding="10,0,0,0"/>
+        <Entry x:Name="VadeEntry"
+               Placeholder="Vade Sayısı Giriniz"
+               Grid.Row="4"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Margin="0,0,10,0"
+               Keyboard="Numeric"
+               BackgroundColor="White"
+               TextColor="Black"/>
+
+        <Slider x:Name="VadeSlider"
+               Minimum="1"
+               Maximum="120"
+               ValueChanged="OnVadeSliderValueChanged"
+               Grid.Row="5"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               Margin="30,10,30,0"
+               ThumbColor="#007ACC"
+               MinimumTrackColor="#007ACC" />
+
+        <StackLayout Grid.Row="6"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="3"
+                     Padding="10"
+                     HorizontalOptions="Start">
+            <Label x:Name="AylikTaksitLabel"
+                   Text="Aylık Taksit: "
+                   TextColor="#004C99"
+                   FontSize="16"/>
+            <Label x:Name="ToplamOdemeLabel"
+                   Text="Toplam Ödeme: "
+                   TextColor="#004C99"
+                   FontSize="16"/>
+            <Label x:Name="ToplamFaizLabel"
+                   Text="Toplam Faiz: "
+                   TextColor="#004C99"
+                   FontSize="16"/>
+        </StackLayout>
+
+        <Button x:Name="HesaplaButton"
+                Text="Hesapla"
+                BackgroundColor="#007ACC"
+                TextColor="White"
+                CornerRadius="8"
+                FontAttributes="Bold"
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="10"/>
+    </Grid>
+</ContentPage>
+
